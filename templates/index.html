@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVerse - Your Literary Journey Begins</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="brand">
+                <h1 class="logo">BookVerse</h1>
+                <p class="tagline">Discover your next great read</p>
+            </div>
+            
+            <div class="illustration">
+                <div class="floating-book book-1">
+                    <div class="book-spine"></div>
+                </div>
+                <div class="floating-book book-2">
+                    <div class="book-spine"></div>
+                </div>
+                <div class="floating-book book-3">
+                    <div class="book-spine"></div>
+                </div>
+                <div class="circle-accent"></div>
+            </div>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">📚</div>
+                    <h3>Smart Recommendations</h3>
+                    <p>AI-powered suggestions based on your taste</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Curated Collections</h3>
+                    <p>Discover handpicked books across genres</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💫</div>
+                    <h3>Personal Library</h3>
+                    <p>Build and manage your reading list</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-panel">
+            <div class="auth-container">
+                <!-- Login Form -->
+                <div class="form-wrapper" id="loginForm">
+                    <h2>Welcome Back</h2>
+                    <p class="subtitle">Continue your literary journey</p>
+                    
+                    <form id="loginFormElement">
+                        <div class="input-group">
+                            <label for="loginUsername">Username</label>
+                            <input type="text" id="loginUsername" name="username" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" name="password" required>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Sign In</button>
+                        
+                        <div class="form-message" id="loginMessage"></div>
+                    </form>
+                    
+                    <p class="switch-form">
+                        Don't have an account? 
+                        <a href="#" id="showSignup">Create one</a>
+                    </p>
+                </div>
+                
+                <!-- Signup Form -->
+                <div class="form-wrapper hidden" id="signupForm">
+                    <h2>Join BookVerse</h2>
+                    <p class="subtitle">Start your reading adventure today</p>
+                    
+                    <form id="signupFormElement">
+                        <div class="input-group">
+                            <label for="signupUsername">Username</label>
+                            <input type="text" id="signupUsername" name="username" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="signupEmail">Email</label>
+                            <input type="email" id="signupEmail" name="email" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" name="password" required>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Create Account</button>
+                        
+                        <div class="form-message" id="signupMessage"></div>
+                    </form>
+                    
+                    <p class="switch-form">
+                        Already have an account? 
+                        <a href="#" id="showLogin">Sign in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>
